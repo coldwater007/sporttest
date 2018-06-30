@@ -1,25 +1,24 @@
+
+
+//系统的Main过程
+/*
+新建koa对象
+初始化配置
+注册get post 请求逻辑
+监听端口  开启服务
+
+ */
+
 const Koa = require('koa');
-
 const bodyParser = require('koa-bodyparser');
-
 const controller = require('./controller');
-
 const app = new Koa();
-
-//const load=require('./DB_model/model');
-
-
 // 打印请求信息
 app.use(async (ctx, next) => {
     console.log(`Process ${ctx.request.method} ${ctx.request.url}...`);
     await next();
 });
-
-// 可以解析post请求
-app.use(bodyParser());
-
-// 使用controller中提供的逻辑
-app.use(controller());
-
-app.listen(3000);
+app.use(bodyParser());//注册body解析功能
+app.use(controller());//调用controller.js中逻辑完成post get请求逻辑的注册
+app.listen(3000);//监听3000端口  开启服务
 console.log('app started at port 3000...');

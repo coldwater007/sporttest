@@ -1,7 +1,18 @@
+/*
+
+完成controllers目录下
+所有导出的函数逻辑的解析
+并通过router.post  router.get
+方式  注册到系统中
+
+ */
+
+
+
 const fs = require('fs');
 
 //映射函数
-//讲controller暴露的json串   解析成对应映射关系
+//将controller暴露的json串   解析成对应映射关系
 function addMapping(router, mapping) {
     for (var url in mapping) {
         if (url.startsWith('GET ')) {
@@ -36,6 +47,6 @@ module.exports = function (dir) {
         router = require('koa-router')();
         //获得系统router
         addControllers(router, controllers_dir);
-        //像系统router中添加  controllers目录下的请求逻辑
+        //向系统router中添加  controllers目录下的请求逻辑
     return router.routes();
 };

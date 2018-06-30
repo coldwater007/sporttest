@@ -1,10 +1,17 @@
+/*
+系统数据库连接配置
+并导出Sequelize对象
+
+ */
+
+
 const Sequelize = require('sequelize');  //获取Sequelize对象类
 
 var config = {
     database: 'edu_system',
     username: 'root',
-    password: '123456',
-    host: 'localhost',
+    password: '123',
+    host: '120.78.168.177',
     port: 3306
 };
 //数据库链接相关配置信息
@@ -23,4 +30,5 @@ var sequelize = new Sequelize(config.database, config.username, config.password,
     }
 );
 
-module.exports = sequelize;  //暴露数据库链接
+
+module.exports = sequelize;  //导出数据库链接
