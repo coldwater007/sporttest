@@ -62,7 +62,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="449" />
     <option name="y" value="199" />
     <option name="width" value="1183" />
@@ -79,6 +79,11 @@
             <path>
               <item name="test_koa" type="b2602c69:ProjectViewProjectNode" />
               <item name="test_koa" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test_koa" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test_koa" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -159,15 +164,15 @@
       <workItem from="1529896237758" duration="10905000" />
       <workItem from="1530150410030" duration="1241000" />
       <workItem from="1530329934951" duration="11581000" />
-      <workItem from="1530416230024" duration="9775000" />
+      <workItem from="1530416230024" duration="10976000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40251000" />
+    <option name="totallyTimeSpent" value="41452000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1390" height="747" extended-state="6" />
+    <frame x="-7" y="-7" width="1390" height="747" extended-state="7" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22747093" />
       <window_info anchor="bottom" id="TODO" order="6" />
