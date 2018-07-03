@@ -6,7 +6,6 @@
  */
 
 const models =require('../DB_model/model.js');
-const sendEmailtoALL=require('../fun_packgae/sendEmailtoALL.js');
 const getnowdate=require('../fun_packgae/get_now_date.js');
 
 var news_publish = async (ctx, next) =>
