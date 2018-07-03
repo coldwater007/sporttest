@@ -7,7 +7,7 @@
 const Sequelize = require('sequelize');  //加载Sequelize模块
 const mysequelize=require('../DB_config/config');//mysql数据库连接对象
 
-console.log('加载数据库连接...');
+console.log('加载ORM模型...');
 
 //建立一个 ORM 实体模型    学生登陆表
 var load = mysequelize.define('load', {
@@ -104,6 +104,26 @@ var course = mysequelize.define('course', {
 }, {
     timestamps: false
 });
+
+//通知 model
+var new_info = mysequelize.define('new', {
+    id: {
+        type: Sequelize.INTEGER() ,
+        autoIncrement:1,  //设定每次自增+1
+        primaryKey: true  //是一个自增主键
+    },
+
+    title:Sequelize.STRING(),  //标题
+    time:Sequelize.STRING(),  //发布时间
+    writer:Sequelize.STRING(),  //发布者
+    content:Sequelize.TEXT()  //内容
+
+
+}, {
+    timestamps: false
+});
+
+
 //选课模型
 
 var sc = mysequelize.define('sc',
@@ -123,6 +143,24 @@ var sc = mysequelize.define('sc',
     timestamps: false
 });
 
+//配置模型config
+var system_config= mysequelize.define('system_config',
+    {
+        config_item: {
+            type: Sequelize.STRING(),
+            primaryKey: true
+        },
+        config_value: {
+            type: Sequelize.STRING(),
+
+        },
+
+
+
+    }, {
+        timestamps: false
+    });
+
 
 
 
@@ -134,5 +172,7 @@ module.exports=
         'student':student,
         'grade':grade,
         'course':course,
-        'sc':sc
+        'sc':sc,
+        'new_info':new_info,
+        'system_config':system_config
     };

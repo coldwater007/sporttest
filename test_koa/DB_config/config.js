@@ -29,6 +29,6 @@ var sequelize = new Sequelize(config.database, config.username, config.password,
         }
     }
 );
-
+console.log(`连接到数据库 ${config.host} ${config.database}...`);
 
 module.exports = sequelize;  //导出数据库链接

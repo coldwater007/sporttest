@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50639
 File Encoding         : 65001
 
-Date: 2018-07-01 15:05:57
+Date: 2018-07-03 14:51:31
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -95,12 +95,12 @@ CREATE TABLE `loads` (
 DROP TABLE IF EXISTS `news`;
 CREATE TABLE `news` (
   `id` smallint(6) NOT NULL AUTO_INCREMENT,
-  `title` varchar(45) DEFAULT NULL,
-  `time` date DEFAULT NULL,
-  `writer` varchar(20) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `time` varchar(255) DEFAULT NULL,
+  `writer` varchar(255) DEFAULT NULL,
   `content` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=gb2312;
+) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=gb2312;
 
 -- ----------------------------
 -- Table structure for sc_point
@@ -277,6 +277,16 @@ CREATE TABLE `stugrade2017` (
   `xuejihao` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=gb2312;
+
+-- ----------------------------
+-- Table structure for system_configs
+-- ----------------------------
+DROP TABLE IF EXISTS `system_configs`;
+CREATE TABLE `system_configs` (
+  `config_item` varchar(255) NOT NULL,
+  `config_value` varchar(255) NOT NULL,
+  PRIMARY KEY (`config_item`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for teacher

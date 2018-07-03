@@ -34,7 +34,7 @@ function addControllers(router, dir) {
     fs.readdirSync(__dirname + '/' + dir).filter((f) => {
         return f.endsWith('.js');
     }).forEach((f) => {
-        console.log(`process controller: ${f}...`);
+        console.log(`正在解析  controller: ${f}...`);
         let mapping = require(__dirname + '/' + dir + '/' + f);
         addMapping(router, mapping);
     });

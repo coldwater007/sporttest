@@ -14,7 +14,6 @@ var course_choice = async (ctx, next) =>
     //获取post数据
     var sno = ctx.request.body.sno || '';  //学号
     var stno=ctx.request.body.stno ||'';  //课程号
-
     var sc=models.sc;//获取sc模型
 
     //首先查询是否已经选课

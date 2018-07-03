@@ -20,6 +20,8 @@
     "koa-static": "^5.0.0",
     "koa-views": "^6.1.4",
     "mysql2": "^1.5.3",
+    "nodemailer": "^4.6.7",
+    "nodemailer-smtp-transport": "^2.7.4",
     "pug": "^2.0.0-rc.1"
   },
   "devDependencies": {

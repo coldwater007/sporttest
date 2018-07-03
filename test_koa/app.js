@@ -15,10 +15,11 @@ const controller = require('./controller');
 const app = new Koa();
 // 打印请求信息
 app.use(async (ctx, next) => {
-    console.log(`Process ${ctx.request.method} ${ctx.request.url}...`);
+    console.log(`正在请求 ${ctx.request.method} ${ctx.request.url}...`);
     await next();
 });
 app.use(bodyParser());//注册body解析功能
 app.use(controller());//调用controller.js中逻辑完成post get请求逻辑的注册
 app.listen(3000);//监听3000端口  开启服务
-console.log('app started at port 3000...');
+console.log('服务已开启...');
+console.log('端口: 3000...');
