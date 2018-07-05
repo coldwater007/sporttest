@@ -10,8 +10,10 @@ var grade_query= async (ctx, next) =>
     //获取post数据
     var sno = ctx.request.body.sno || ''; //学生学号
     var testtime=ctx.request.body.testtime||'';//测试年份
-
-
+    var season=ctx.request.body.season;//测试季度
+    if(season==null || season=='')
+        season='春';
+    testtime+=season;
     console.log(`sno: ${sno}，testtime:${testtime}`);
 
     var grade=models.grade;//获取grade模型
