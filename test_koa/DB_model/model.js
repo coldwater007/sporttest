@@ -74,6 +74,7 @@ var grade = mysequelize.define('grade', {
     frun:Sequelize.STRING(),
     jump:Sequelize.STRING(),
     zuowei:Sequelize.STRING(),
+	erun:Sequelize.STRING(),
     onerun:Sequelize.STRING(),
     ywqz:Sequelize.STRING(),
     ytxs:Sequelize.STRING(),
