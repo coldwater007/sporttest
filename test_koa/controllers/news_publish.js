@@ -2,11 +2,10 @@
 管理员发布重要通知
 传入参数： administrator   title  content
 向数据库做持久化
-并向可以选择是否    向所有学生发送邮件通知（如开启选课）
+
  */
 
 const models =require('../DB_model/model.js');
-const sendEmailtoALL=require('../fun_packgae/sendEmailtoALL.js');
 const getnowdate=require('../fun_packgae/get_now_date.js');
 
 var news_publish = async (ctx, next) =>

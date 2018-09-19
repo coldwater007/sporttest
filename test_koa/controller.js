@@ -42,7 +42,7 @@ function addControllers(router, dir) {
 
 module.exports = function (dir) {
     let
-        //默认 求情逻辑放在 controllers目录下
+        //默认 请求逻辑放在 controllers目录下
         controllers_dir = dir || 'controllers',
         router = require('koa-router')();
         //获得系统router

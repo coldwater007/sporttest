@@ -9,9 +9,9 @@ const Sequelize = require('sequelize');  //获取Sequelize对象类
 
 var config = {
     database: 'edu_system',
-    username: 'root',
+    username: 'edu',
     password: '123',
-    host: '120.78.168.177',
+    host: '47.107.48.84',
     port: 3306
 };
 //数据库链接相关配置信息
