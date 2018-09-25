@@ -45,6 +45,7 @@ module.exports = function (dir) {
         //默认 请求逻辑放在 controllers目录下
         controllers_dir = dir || 'controllers',
         router = require('koa-router')();
+
         //获得系统router
         addControllers(router, controllers_dir);
         //向系统router中添加  controllers目录下的请求逻辑

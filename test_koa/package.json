@@ -9,6 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "compress": "^0.99.0",
     "debug": "^3.1.0",
     "koa": "^2.2.0",
     "koa-bodyparser": "^4.2.1",
@@ -23,6 +24,7 @@
     "mysql2": "^1.5.3",
     "nodemailer": "^4.6.7",
     "nodemailer-smtp-transport": "^2.7.4",
+    "path": "^0.12.7",
     "pug": "^2.0.0-rc.1"
   },
   "devDependencies": {
